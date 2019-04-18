@@ -56,7 +56,7 @@ if __name__ == '__main__':
     if len(sys.argv) >= 2:
         _content += "\n" + sys.argv[1]
     _msg = parse_message(_subject, _content)
-    print((_content, _msg))
+    print((_content, _msg.as_string()))
     if yes and send_mail(send_from, send_to, _msg):
         print('success')
     else:
